@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(252, 210, 50);
+}
+
+.hvr_effects:hover {
+  border-bottom: 3px solid rgb(255, 19, 0);
+  border-radius: 20px;
+  transition: ease-in-out 1s;
+}
+
+.navbar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: rgb(252, 210, 50);
+}
+.navbar .brainster {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.navbar .brainster span {
+  font-weight: 500;
+  display: block;
+}
+.navbar .brainster:hover {
+  scale: 1.2;
+  transition: ease-in-out 1s;
+}
+.navbar .employ_button {
+  background-color: rgb(255, 19, 0);
+  color: white;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 40px;
+}
+
+.menu li a {
+  padding: 6px 6px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(49, 48, 56);
+  font-weight: 500;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+}
+
+.open_menu,
+.close_menu {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open_menu {
+  right: 20px;
+  transform: translate(-50%);
+}
+
+.close_menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+    padding-top: 70px;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    color: white;
+    background-color: rgb(48, 47, 56);
+  }
+  .menu li a {
+    padding: 8px 0;
+  }
+  .menu .employ_button {
+    padding: 6px;
+  }
+  .menu li a {
+    text-align: start;
+    color: white;
+  }
+  .open_menu,
+  .close_menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+@media (max-width: 450px) {
+  .menu {
+    flex-direction: column;
+    padding-top: 70px;
+    padding-left: 10px;
+    width: 60%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: rgb(48, 47, 56);
+    color: white;
+  }
+  .menu li a {
+    padding: 8px 0;
+  }
+  .menu .employ_button {
+    padding: 6px;
+  }
+  .menu li {
+    padding-left: 0;
+  }
+  .menu li a {
+    text-align: start;
+    color: white;
+  }
+  .open_menu,
+  .close_menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+.banner {
+  height: 70VH;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.378), rgba(0, 0, 0, 0.378)), url(../../images/brainster\ \(1\).jpg);
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.banner a {
+  text-decoration: none;
+  color: white;
+}
+
+.h1_hover {
+  cursor: pointer;
+  background-image: linear-gradient(rgba(255, 17, 0, 0.501) 0 0), linear-gradient(rgba(255, 17, 0, 0.516) 0 0);
+  background-repeat: no-repeat;
+  background-size: 50% 0.08em;
+  background-position: -100% 100%, 200% 0;
+  transition: background-size 0.3s, background-position 0.3s 0.3s;
+}
+
+.h1_hover:hover {
+  border-radius: 30px;
+  padding: 10px 10px;
+  background-size: 50% 100%;
+  background-position: 0 100%, 100% 0;
+  transition: background-size 0.3s 0.3s, background-position 0.3s;
+}
+
+.banner a:hover {
+  border-radius: 5px;
+  border-bottom: 5px solid rgb(255, 19, 0);
+  scale: 1.3;
+  transition: 1.2s;
+}
+
+.filters {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .filters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .filters button {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .filters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .filters button {
+    width: 100%;
+  }
+}
+.filters button {
+  color: white;
+  background-color: rgb(48, 47, 56);
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 20px 30px;
+  justify-content: space-between;
+  flex-basis: 33.33%;
+  border: none;
+}
+.filters button:focus {
+  background-color: rgb(235, 59, 59);
+  color: rgb(48, 47, 56);
+}
+.filters button i {
+  padding: 5px 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(252, 210, 50);
+  width: 60%;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+@media (max-width: 800px) {
+  .cards {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 450px) {
+  .cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.card_container {
+  background-color: rgb(252, 210, 50);
+  display: flex;
+  width: 100%;
+}
+
+.btn {
+  align-self: center;
+  background-color: rgb(255, 19, 0);
+  color: white;
+}
+.btn:hover {
+  background-color: rgb(255, 19, 0);
+  color: white;
+}
+
+.card {
+  margin-top: 20px;
+  width: 30%;
+  border: none;
+}
+.card:hover {
+  scale: 1.03;
+  transition: ease-in-out 0.5s;
+}
+@media (max-width: 800px) {
+  .card {
+    width: 45%;
+  }
+}
+@media (max-width: 450px) {
+  .card {
+    width: 88%;
+  }
+}
+
+.date {
+  font-size: 11px;
+}
+
+.card_title {
+  background-color: rgb(252, 210, 50);
+  width: 70%;
+  text-align: center;
+  padding: 5px;
+}
+
+.font_card {
+  font-size: 15px;
+}
+
+.captionH2 {
+  background-color: rgb(252, 210, 50);
+}
+.captionH2 h2 {
+  padding: 50px 30px 30px 30px;
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .captionH2 h2 {
+    text-align: start;
+  }
+}
+@media (max-width: 450px) {
+  .captionH2 h2 {
+    text-align: start;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  color: white;
+  background-color: rgb(48, 47, 56);
+}
+footer p {
+  margin: 0;
+}
+footer p span {
+  color: red;
+  font-size: 25px;
+}
+
+.caption_registration {
+  background-color: rgb(252, 210, 50);
+}
+.caption_registration h1 {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  font-size: 60px;
+}
+
+.form_section {
+  min-height: 70vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(252, 210, 50);
+  display: flex;
+}
+.form_section button {
+  text-transform: uppercase;
+  margin-top: 33px;
+  width: 100%;
+  border: none;
+  padding: 15px 15px;
+}
+@media (max-width: 800px) {
+  .form_section button {
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .form_section button {
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+}
+.form_section button:focus {
+  background-color: transparent !important;
+}
+.form_section form {
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .form_section form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+}
+@media (max-width: 450px) {
+  .form_section form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+}
+.form_section form input {
+  padding: 15px 15px;
+}
+.form_section form .select {
+  padding: 15px 15px;
+}
+.form_section .form_div {
+  width: 48%;
+}
+@media (max-width: 800px) {
+  .form_section .form_div {
+    width: 100%;
+  }
+}
+
+option {
+  text-indent: 10px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,46 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+.banner{
+ height: 70VH;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.378), rgba(0, 0, 0, 0.378)) , url(../../images/brainster\ \(1\).jpg);
+    background-position: top;
+ background-size: cover;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: white;
+ flex-direction: column;
+
+a{
+    text-decoration: none;
+    color: white;
+}
+}
+.h1_hover{
+    cursor: pointer;
+   background-image: 
+      linear-gradient(rgba(255, 17, 0, 0.501) 0 0),
+      linear-gradient(rgba(255, 17, 0, 0.516) 0 0);
+    background-repeat: no-repeat;
+    background-size: 50% .08em;
+    background-position:
+      -100% 100%,
+      200% 0;
+    transition: background-size .3s, background-position .3s .3s;
+  }
+  .h1_hover:hover {
+    border-radius: 30px;
+    padding: 10px 10px;
+    background-size: 50% 100%;
+    background-position:
+    
+      0 100%,
+      100% 0;  
+    transition: background-size .3s .3s, background-position .3s;
+  }
+  .banner a:hover{
+    border-radius: 5px;
+    border-bottom: 5px solid var.$btn-color;
+   scale: 1.3;
+   transition: 1.2s;
+  }

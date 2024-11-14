@@ -1,0 +1,155 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+.filters {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+    @include mix.tablet-style {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    @include mix.mobile-style {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    button {
+        color: white;
+        background-color: var.$color-secondary;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        padding: 20px 30px;
+        justify-content: space-between;
+        flex-basis: 33.33%;
+        border: none;
+
+        &:focus {
+            background-color: var.$color-focus;
+            color: var.$color-secondary;
+
+        }
+
+        i {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var.$color-primary;
+
+    width: 60%;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+
+    @include mix.tablet-style {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include mix.mobile-style {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.card_container {
+    background-color: var.$color-primary;
+    display: flex;
+    width: 100%;
+}
+
+.btn {
+    align-self: center;
+    background-color: var.$btn-color;
+    color: white;
+
+    &:hover {
+        background-color: var.$btn-color;
+        color: white;
+    }
+
+}
+
+.card {
+
+    margin-top: 20px;
+    width: 30%;
+    border: none;
+
+    &:hover {
+        scale: 1.03;
+        transition: ease-in-out 0.5s;
+    }
+
+    @include mix.tablet-style {
+
+        width: 45%;
+
+
+    }
+
+    @include mix.mobile-style {
+        width: 88%;
+    }
+}
+
+.date {
+    font-size: var.$font-size-small;
+}
+
+.card_title {
+    background-color: var.$color-primary;
+    width: 70%;
+    text-align: center;
+    padding: 5px;
+}
+
+.font_card {
+    font-size: var.$font-size-medium;
+}
+
+
+.captionH2 {
+    h2 {
+        padding: 50px 30px 30px 30px;
+        margin: 0;
+
+    }
+
+    @include mix.tablet-style {
+        h2 {
+            text-align: start;
+        }
+    }
+
+    @include mix.mobile-style {
+        h2 {
+            text-align: start;
+        }
+    }
+
+    background-color: var.$color-primary;
+}

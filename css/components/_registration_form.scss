@@ -1,0 +1,76 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+.caption_registration{
+    background-color: var.$color-primary;
+    h1{
+        margin: 0;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        font-size: 60px;
+    }
+}
+.form_section{
+  
+    min-height: 70vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var.$color-primary;
+display: flex;
+
+button{
+    text-transform: uppercase;
+    @include mix.tablet-style{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    }
+    @include mix.mobile-style{
+        margin-top: 150px;
+        margin-bottom: 50px;
+        }
+    margin-top: 33px;
+    width: 100%;
+    border: none;
+    padding: 15px 15px;
+    &:focus{
+        background-color: transparent !important;
+    }
+}
+form{
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mix.tablet-style{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+       
+    }
+    @include mix.mobile-style{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+       
+    }
+    input{
+        padding: 15px 15px;
+
+    }
+ .select{
+   padding: 15px 15px;
+   
+ 
+  }
+}
+   .form_div{
+    @include mix.tablet-style{
+        width: 100%;
+    }
+    width: 48%;
+   }}
+   option{
+    text-indent: 10px;
+  }

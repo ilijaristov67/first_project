@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+@function rem-calc($size) {
+  @return (math.div($size, 16)) * 1rem;
+}
+
+// Font settings
+// $font-family-base:           'Roboto', sans-serif;
+// $heading-family-base:        'Otomanopee One', sans-serif;
+
+$color-primary: rgb(252, 210, 50);
+$color-secondary: rgb(48, 47, 56);
+$btn-color: rgb(255, 19, 0);
+$txt-color-primary: rgb(49, 48, 56);
+$color-focus: rgb(235, 59, 59);
+$font-size-small: 11px;
+$font-size-medium: 15px;

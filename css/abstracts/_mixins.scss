@@ -1,0 +1,14 @@
+@use "./variables" as var;
+@use 'sass:math';
+
+@mixin tablet-style{
+  @media(max-width:800px){
+    @content;
+  }
+}
+
+@mixin mobile-style{
+  @media(max-width:450px){
+    @content;
+  }
+}
